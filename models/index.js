@@ -5,7 +5,7 @@ const dbCredentials = require("../config/database.config.js");
 
 dotenv.config();
 
-const env = process.env.MODE || "development";
+const env = process.env.NODE_ENV || "development";
 
 const sequelize = new Sequelize(
   dbCredentials[env].database,
